@@ -4,7 +4,7 @@ if ('Promise' in window && 'fetch' in window) {
   init();
 }
 else {
-  inject('https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch&flags=gated,always', init);
+  inject('https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Element.prototype.classList&flags=gated,always', init);
 }
 
 if ('ActiveXObject' in window) {
