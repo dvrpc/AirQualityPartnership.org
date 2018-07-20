@@ -1,0 +1,38 @@
+{
+  "name": "Air Quality Partnership",
+  "short_name": "Air Quality",
+  "description":
+    "A public / private coalition dedicated to improving air quality in the Delaware Valley through air quality initiatives and advisories.",
+  "background_color": "#f7f7f7",
+  "display": "minimal-ui",
+  "dir": "ltr",
+  "lang": "en-US",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/img/bug-favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/bug-highres.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/bug-apple-touch.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "196x196"
+    },
+    {
+      "src": "/img/1c_ColorPrimaryLarge.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0078ae"
+}

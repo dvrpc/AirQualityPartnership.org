@@ -1,29 +1,30 @@
 body,
 .drawer {
-	display: block;
+  display: block;
 }
 header {
-	margin: 4em 0;
+  margin: 4em 0;
 }
 .swiper-slide {
-	height: calc(14em + 40px);
+  height: calc(14em + 40px);
 }
 main {
-	overflow: visible;
+  overflow: visible;
 }
-.content-panel--active, .forecast-details__panel--active > .forecast-details-panel {
-	overflow: visible;
-	margin-top: -10px;
-	position: relative;
-	max-height: none;
+.content-panel--active,
+.forecast-details__panel--active > .forecast-details-panel {
+  overflow: visible;
+  margin-top: -10px;
+  position: relative;
+  max-height: none;
 }
 .forecast-details-panel__close-btn {
-	position: absolute;
+  position: absolute;
 }
 .forecast-grid {
-	overflow: hidden;
+  overflow: hidden;
 }
-figure>div>div {
-	overflow: hidden;
-	max-width: 100%;
+figure > div > div {
+  overflow: hidden;
+  max-width: 100%;
 }
