@@ -16,22 +16,18 @@
     ">1% in US"
   ],
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "cssnano": "^4.0.3",
-    "google-closure-compiler-js": "^20180610.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "^3.2.0",
     "live-server": "^1.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "postcss-loader": "^2.1.6",
-    "postcss-preset-env": "^5.2.2",
-    "script-ext-html-webpack-plugin": "^2.0.1",
-    "style-ext-html-webpack-plugin": "^3.4.7",
+    "postcss-preset-env": "^5.2.3",
     "style-loader": "^0.21.0",
-    "webpack": "^4.16.1",
+    "webpack": "^4.16.2",
     "webpack-cli": "^3.1.0"
   },
   "optionalDependencies": {

@@ -1,10 +1,8 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
-const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
 
 const hashLength = 5;
 
@@ -14,17 +12,11 @@ module.exports = {
     new webpack.DefinePlugin({ BASE_URL: JSON.stringify("/") }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      inlineSource: '.css$'
+      inlineSource: ".[css|js]$"
     }),
     new HtmlWebpackInlineSourcePlugin(),
-    new ScriptExtHtmlWebpackPlugin({
-      defer: ["defer"]
-    }),
-    new MiniCssExtractPlugin({
-      filename: `style.[contenthash:${hashLength}].css`
-    }),
-    new CopyWebpackPlugin([{ from: "static" }]),
-    new CleanWebpackPlugin([`dist/*.${"?".repeat(hashLength)}.*`])
+    new MiniCssExtractPlugin(),
+    new CopyWebpackPlugin([{ from: "static" }])
   ],
   module: {
     rules: [
