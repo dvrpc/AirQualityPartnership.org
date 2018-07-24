@@ -7,7 +7,6 @@
   <title>Air Quality Partnership</title>
   <meta name="description" content="A public/private coalition provided by DVRPC dedicated to improving air quality in the Delaware Valley through air quality initiatives and advisories.">
   <meta name="theme-color" content="#0078ae">
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Roboto:400,700" rel="stylesheet">
   <link rel="manifest" href="/manifest.json">
 </head>
 
@@ -15,10 +14,12 @@
   <header>
     <div>
       <section>
-        <button class="demo-menu material-icons">menu</button>
+        <button class="demo-menu" aria-label="menu">
+          <span class="icon-menu"></span>
+        </button>
       </section>
       <section class="logo">
-        <a href="https://www.dvrpc.org/" target="_blank" style="border-right: 1px solid #aaa;">
+        <a rel="noopener" href="https://www.dvrpc.org/" target="_blank" style="border-right: 1px solid #aaa;">
           <img src="/img/dvrpc.png" alt="Delaware Valley Regional Planning Commission" width="162">
         </a>
         <a href="/" data-root>
@@ -30,9 +31,9 @@
   <div class="content">
     <aside class="drawer">
       <nav class="drawer__drawer">
-        <a href="#" class="drawer__close-btn">
-          <span class="material-icons">close</span>
-        </a>
+        <button class="drawer__close-btn" aria-label="close">
+          <span class=" icon-close"></span>
+        </button>
         <div class="drawer-list">
           <a class="drawer-list-item" href="/About/">
             About
@@ -43,7 +44,7 @@
           <a class="drawer-list-item" href="/Resources/">
             Resources
           </a>
-          <a class="drawer-list-item" href="http://delawarevalley.enviroflash.info/signup.cfm" target="_blank">
+          <a class="drawer-list-item" href="http://delawarevalley.enviroflash.info/signup.cfm" rel="noopener" target="_blank">
             Sign Up for Alerts
           </a>
         </div>
@@ -53,7 +54,7 @@
           <p>
             <a href="mailto:sgreene@dvrpc.org">sgreene@dvrpc.org</a> | 215.238.2860
             <br/>
-            <a href="http://www.dvrpc.org/GetInvolved/TitleVI/">Title VI Statement</a>
+            <a rel="noopener" href="https://www.dvrpc.org/GetInvolved/TitleVI/">Title VI Statement</a>
           </p>
           <p>
             <small>Copyright &copy; 2006-
@@ -71,7 +72,7 @@
       <div class="forecast-grid">
         <div class="forecast__prev">
           <a class="forecast__link--prev" href="#">
-            <i class="material-icons">chevron_left</i>
+            <span class="icon-left"></span>
             <div class="rotate-left">
               <span>YESTERDAY</span>
             </div>
@@ -82,7 +83,7 @@
             <div class="rotate-right">
               <span>TOMORROW</span>
             </div>
-            <i class="material-icons">chevron_right</i>
+            <span class="icon-right"></span>
           </a>
         </div>
         <div class="forecast-grid__content">
@@ -97,7 +98,9 @@
             Take Action
           </a>
           <div class="forecast-details-panel">
-            <a href="#" class="forecast-details-panel__close-btn material-icons">close</a>
+            <button class="forecast-details-panel__close-btn" aria-label="close">
+              <span class="icon-close"></span>
+            </button>
             <h2>Take Action</h2>
             <ul class="list-group">
               <li class="list-group-item visible--good visible--moderate visible--sensitive visible--unhealthy">Take transit or rideshare.
@@ -147,20 +150,10 @@
           </div>
         </div>
         <div class="forecast-details__panel">
-          <a href="http://delawarevalley.enviroflash.info/signup.cfm" class="forecast-details__link mobile-only" target="_blank">
+          <a rel="noopener" href="http://delawarevalley.enviroflash.info/signup.cfm" class="forecast-details__link mobile-only" target="_blank">
             Sign Up for Alerts
           </a>
         </div>
-        <!--<div class="forecast-details__panel">
-            <a href="#" class="forecast-details__link">
-              Forecast
-            </a>
-            <div class="forecast-details-panel">
-              <a href="#" class="forecast-details-panel__close-btn material-icons">close</a>
-              <h2>Forecast Details</h2>
-              <p class="forecast-details-panel__content"></p>
-            </div>
-          </div>-->
       </div>
       <div class="content-panel"></div>
     </main>
@@ -169,7 +162,7 @@
     <div>
       <p class="adjust-col">
         <a href="mailto:sgreene@dvrpc.org">sgreene@dvrpc.org</a> | 215.238.2860 |
-        <a href="http://www.dvrpc.org/GetInvolved/TitleVI/">Title VI Statement</a>
+        <a rel="noopener" href="https://www.dvrpc.org/GetInvolved/TitleVI/">Title VI Statement</a>
         <br/>
         <small>Copyright © 2006-
           <span class="current-year"></span> Air Quality Partnership |

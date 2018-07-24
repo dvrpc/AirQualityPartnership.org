@@ -12,7 +12,7 @@ module.exports = {
     new webpack.DefinePlugin({ BASE_URL: JSON.stringify("/") }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      inlineSource: ".[css|js]$"
+      inlineSource: ".(css|js)$"
     }),
     new HtmlWebpackInlineSourcePlugin(),
     new MiniCssExtractPlugin(),

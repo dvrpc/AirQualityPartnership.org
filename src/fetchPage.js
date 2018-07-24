@@ -7,11 +7,14 @@ const fetchPage = url => {
     .then(response => {
       $(".content-panel")
         .html(
-          "<a href=\"#\" onclick=\"$('.content-panel--active').removeClass('content-panel--active');history.pushState(null, '', '/');return false;\" class=\"forecast-details-panel__close-btn material-icons\">close</a>" +
+          "<button onclick=\"$('.content-panel--active').removeClass('content-panel--active');history.pushState(null, '', '/');return false;\" class=\"forecast-details-panel__close-btn\" aria-label=\"close\"><span class=\"icon-close\"></span></button>" +
             response
         )
         .addClass("content-panel--active")
         .scrollTop(0);
+      $(".forecast-details__panel--active").removeClass(
+        "forecast-details__panel--active"
+      );
       $(".drawer--active").removeClass("drawer--active");
     });
   logGA(url);
