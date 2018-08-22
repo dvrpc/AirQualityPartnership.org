@@ -245,7 +245,7 @@ main {
 .rotate-left span {
   transform: rotate(-90deg);
   transform-origin: center;
-  margin-left: -3em;
+  margin-left: -2.6em;
   letter-spacing: 0.1em;
   line-height: 1;
 }
