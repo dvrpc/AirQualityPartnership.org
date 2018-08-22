@@ -576,7 +576,7 @@ footer {
     flex: 0;
   }
   .content {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
     margin-bottom: 4em;
     flex: 0;
@@ -674,7 +674,7 @@ footer {
     justify-content: space-around;
   }
   .adjust-col {
-    padding: 0 6vw;
+    padding: 0 32px;
     width: 100%;
   }
   .wide-col {
