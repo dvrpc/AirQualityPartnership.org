@@ -507,16 +507,16 @@ figcaption {
   display: block;
 }
 .forecast--moderate .forecast-grid {
-  background: hsla(53, 100%, 48%, 0.6);
+  background: hsla(50, 100%, 50%, 0.6);
   color: #331b01;
-  text-shadow: 2px 2px 5px hsla(53, 100%, 88%, 0.6),
-    -2px -2px 5px hsla(53, 100%, 88%, 0.6),
-    2px -2px 5px hsla(53, 100%, 88%, 0.6), -2px 2px 5px hsla(53, 100%, 88%, 0.6);
+  text-shadow: 2px 2px 5px hsla(50, 100%, 85%, 0.6),
+    -2px -2px 5px hsla(50, 100%, 85%, 0.6),
+    2px -2px 5px hsla(50, 100%, 85%, 0.6), -2px 2px 5px hsla(50, 100%, 85%, 0.6);
 }
 .forecast--moderate .forecast__next,
 .forecast--moderate .forecast__prev,
 .forecast--moderate h2 {
-  background: hsl(53, 100%, 48%);
+  background: hsl(50, 100%, 50%);
 }
 .forecast--moderate .icon-right,
 .forecast--sensitive .icon-right {
@@ -539,16 +539,16 @@ figcaption {
   display: block;
 }
 .forecast--sensitive .forecast-grid {
-  background: hsla(26, 100%, 64%, 0.6);
-  text-shadow: 2px 2px 5px hsla(26, 100%, 88%, 0.6),
-    -2px -2px 5px hsla(26, 100%, 88%, 0.6),
-    2px -2px 5px hsla(26, 100%, 88%, 0.6), -2px 2px 5px hsla(26, 100%, 88%, 0.6);
+  background: hsla(26, 100%, 61%, .55);
+  text-shadow: 2px 2px 5px hsla(26, 100%, 81%, 0.6),
+    -2px -2px 5px hsla(26, 100%, 81%, 0.6),
+    2px -2px 5px hsla(26, 100%, 81%, 0.6), -2px 2px 5px hsla(26, 100%, 81%, 0.6);
   color: #331b01;
 }
 .forecast--sensitive .forecast__next,
 .forecast--sensitive .forecast__prev,
 .forecast--sensitive h2 {
-  background: hsl(26, 100%, 64%);
+  background: hsl(26, 100%, 61%);
 }
 .forecast--unavailable::before {
   background: #888;
@@ -570,11 +570,7 @@ footer {
   }
   header div {
     justify-content: flex-start;
-    background: linear-gradient(
-      to right,
-      #f9f9f9 50%,
-      transparent 75%
-    );
+    background: linear-gradient(to right, #f9f9f9 50%, transparent 75%);
   }
   header section {
     flex: 0;
@@ -652,8 +648,6 @@ footer {
   }
   .forecast-details-panel,
   .content-panel {
-    /*right: 28px;
-    bottom: 32px;*/
     position: static;
   }
   .forecast-details-panel,
@@ -687,13 +681,11 @@ footer {
     padding: 0 10px;
   }
 }
-
 @media (min-width: 769px) {
   .wide-col {
     flex: 0 1 480px;
   }
 }
-
 @media (min-width: 1200px) {
   .content,
   footer > div {
