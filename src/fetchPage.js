@@ -7,7 +7,7 @@ const fetchPage = url => {
     .then(response => {
       $(".content-panel")
         .html(
-          "<button onclick=\"$('.content-panel--active').removeClass('content-panel--active');history.pushState(null, '', '/');return false;\" class=\"forecast-details-panel__close-btn\" aria-label=\"close\"><span class=\"icon-close\"></span></button>" +
+          "<button onclick=\"$('.content-panel--active').removeClass('content-panel--active');history.pushState(null, '', '/');window.ga('set', 'page', '/');window.ga('send', 'pageview');return false;\" class=\"forecast-details-panel__close-btn\" aria-label=\"close\"><span class=\"icon-close\"></span></button>" +
             response
         )
         .addClass("content-panel--active")

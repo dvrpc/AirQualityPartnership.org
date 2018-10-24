@@ -91,7 +91,7 @@ function init() {
       `a:not([href="#"]):not([href^="http"]):not([data-root]):not([target=_blank]):not([href="${BASE_URL}"])`
     ).on("click", function(e) {
       e.preventDefault();
-      fetchPage(this.href);
+      fetchPage(new URL(this.href).pathname);
     });
 
     $(".current-year").html(new Date().getFullYear());
@@ -101,7 +101,7 @@ function init() {
   if (location.hash.length) {
     fetchPage(location.hash.slice(1));
   } else {
-    logGA(location);
+    logGA(location.pathname);
   }
 }
 
