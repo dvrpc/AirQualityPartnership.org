@@ -8,7 +8,7 @@ protected void Application_BeginRequest(object sender, EventArgs e)
 	Match m = r.Match(Request.RawUrl);
 	if (Request.Url.Query.Length == 0 && Request.RawUrl.Length > 1 && !m.Success)
 	{
-		Response.Redirect("http://www.airqualitypartnership.org/#" + Request.RawUrl);
+		Response.Redirect("https://www.airqualitypartnership.org/#" + Request.RawUrl);
 	}
 	else
 	{
