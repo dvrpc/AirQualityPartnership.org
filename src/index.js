@@ -109,7 +109,7 @@ if ("Promise" in window && "fetch" in window) {
   init.call(window);
 } else {
   inject(
-    "https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Element.prototype.classList&flags=gated,always",
+    "https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise,fetch,Element.prototype.classList,URL&flags=gated,always",
     init
   );
 }
