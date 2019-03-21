@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const hashLength = 5;
 
@@ -16,7 +17,12 @@ module.exports = {
     }),
     new HtmlWebpackInlineSourcePlugin(),
     new MiniCssExtractPlugin(),
-    new CopyWebpackPlugin([{ from: "static" }])
+    new CopyWebpackPlugin([{ from: "static" }]),
+    new WorkboxPlugin.GenerateSW({
+      skipWaiting: true,
+      clientsClaim: true,
+      exclude: [/\.aspx$/]
+    })
   ],
   module: {
     rules: [

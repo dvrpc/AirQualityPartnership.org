@@ -5,6 +5,7 @@ import preloadImages from "./preloadImages";
 import fetchPage from "./fetchPage";
 import { initGA, logGA } from "./analytics";
 import Swiper from "./Swiper";
+import registerServiceWorker from "./serviceWorker.js";
 
 import "./css/index.css";
 
@@ -103,6 +104,8 @@ function init() {
   } else {
     logGA(location.pathname);
   }
+
+  registerServiceWorker();
 }
 
 if ("Promise" in window && "fetch" in window) {

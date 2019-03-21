@@ -28,7 +28,8 @@
     "postcss-preset-env": "^6.6.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.0"
+    "webpack-cli": "^3.3.0",
+    "workbox-webpack-plugin": "^4.1.1"
   },
   "optionalDependencies": {
     "license-checker": "^8.0.4"
