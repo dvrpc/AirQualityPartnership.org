@@ -47,8 +47,23 @@ const $ = function(qsa) {
   };
 
   arr.html = function(html) {
+    const frag = document.createDocumentFragment();
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+    Array.prototype.slice.call(temp.childNodes).forEach(function(child) {
+      frag.appendChild(child);
+    });
+    Array.prototype.slice
+      .call(frag.querySelectorAll("script"))
+      .forEach(function(child) {
+        const script = document.createElement("script");
+        child.hasAttributes("src") && (script.src = child.src);
+        script.textContent = child.textContent;
+        frag.appendChild(script);
+      });
     arr.forEach(function(el) {
-      el.innerHTML = html;
+      el.innerHTML = "";
+      el.appendChild(frag.cloneNode(true));
     });
     return this;
   };
