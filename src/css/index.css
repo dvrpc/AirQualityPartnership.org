@@ -186,7 +186,6 @@ main {
   min-height: 250px;
   min-width: 100vw;
   overflow: auto;
-  background: #f9f9f9;
   opacity: 1;
   z-index: 1;
   max-height: 100vh;
@@ -420,6 +419,7 @@ h1 {
   margin-left: -32px;
   margin-right: -32px;
 }
+/*
 .content-panel a:not(.material-icons) {
   text-shadow: 1px 1px 0 #f9f9f9, -1px 1px 0 #f9f9f9, 2px 0 0 #f9f9f9,
     -2px 0 0 #f9f9f9;
@@ -428,6 +428,7 @@ h1 {
   background-image: linear-gradient(#f9f9f9 50%, hsla(0, 0%, 0%, 0.31) 50%);
   background-repeat: repeat-x;
 }
+*/
 .content-panel a::selection {
   text-shadow: none;
 }
