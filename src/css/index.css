@@ -28,8 +28,8 @@ body::before {
   transition: background 1s;
 }
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: underline rgba(0,0,0,.24);
 }
 small {
   font-size: 0.9em;
