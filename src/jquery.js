@@ -1,7 +1,16 @@
 //attoQuery
 const $ = function(qsa) {
-  const arr = Array.prototype.slice.call(document.querySelectorAll(qsa));
-
+  let arr;
+  if (typeof qsa === "string") {
+    arr = Array.prototype.slice.call(document.querySelectorAll(qsa));
+  }
+  else if (Array.isArray(qsa)) {
+    arr = qsa;
+  }
+  else {
+    arr = [];
+  }
+  
   arr.on = function(ev, callback) {
     arr.forEach(function(el) {
       el.addEventListener(ev, function(e) {
@@ -89,6 +98,14 @@ const $ = function(qsa) {
         el.style[prop] = val;
       }
     });
+  };
+
+  arr.find = function(qsa) {
+    const results = [];
+    arr.forEach(function(el) {
+      results.concat(Array.prototype.slice.call(el.querySelectorAll(qsa)));
+    });
+    return $(results);
   };
 
   return arr;

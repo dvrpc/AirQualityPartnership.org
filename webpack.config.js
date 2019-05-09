@@ -3,11 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const WorkboxPlugin = require("workbox-webpack-plugin");
-
-const hashLength = 5;
+const OfflinePlugin = require("offline-plugin");
 
 module.exports = {
+  entry: {
+    main: "./src/index.js"
+  },
   devtool: "source-map",
   plugins: [
     new webpack.DefinePlugin({ BASE_URL: JSON.stringify("/") }),
@@ -17,11 +18,26 @@ module.exports = {
     }),
     new HtmlWebpackInlineSourcePlugin(),
     new MiniCssExtractPlugin(),
-    new CopyWebpackPlugin([{ from: "static" }]),
-    new WorkboxPlugin.GenerateSW({
-      skipWaiting: true,
-      clientsClaim: true,
-      exclude: [/\.aspx$/]
+    new CopyWebpackPlugin([{ from: "static" },{ from: "partials", to: "partials" }]),
+    new OfflinePlugin({
+      responseStrategy: "network-first",
+      publicPath: "/",
+      excludes: [
+        "**/.*",
+        "**/*.map",
+        "**/*.config",
+        "bin/**",
+        "**/*.aspx",
+        "**/*.asax"
+      ],
+      caches: {
+        main: ["main.js", "main.css", "index.html"],
+        additional: [":rest:"]
+      },
+      ServiceWorker: {
+        events: true,
+        publicPath: "/sw.js"
+      }
     })
   ],
   module: {
