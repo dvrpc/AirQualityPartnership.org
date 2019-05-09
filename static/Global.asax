@@ -7,7 +7,8 @@ protected void Application_BeginRequest(object sender, EventArgs e)
 		"/news/",
 		"/resources/",
 		"/greencommute/",
-		"/greencommute/rules/"
+		"/greencommute/rules/",
+		"/404/"
 	};
 
     if (Routes.Contains(Request.Url.AbsolutePath.ToLower()))
