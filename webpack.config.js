@@ -9,8 +9,12 @@ module.exports = {
   entry: {
     main: "./src/index.js"
   },
-  devtool: "source-map",
+  devtool: false,
   plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      publicPath: '/',
+      filename: '[file].map'
+    }),
     new webpack.DefinePlugin({ BASE_URL: JSON.stringify("/") }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
@@ -18,7 +22,10 @@ module.exports = {
     }),
     new HtmlWebpackInlineSourcePlugin(),
     new MiniCssExtractPlugin(),
-    new CopyWebpackPlugin([{ from: "static" },{ from: "partials", to: "partials" }]),
+    new CopyWebpackPlugin([
+      { from: "static" },
+      { from: "partials", to: "partials" }
+    ]),
     new OfflinePlugin({
       responseStrategy: "network-first",
       publicPath: "/",
