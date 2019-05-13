@@ -25,6 +25,7 @@ function init() {
   window.addEventListener("popstate", function(event) {
     if (location.pathname === "/") {
       $(".content-panel--active").removeClass("content-panel--active");
+      logGA(location.pathname);
     } else {
       updatePage(event.state.response);
     }
@@ -46,11 +47,6 @@ if ("ActiveXObject" in window) {
   css.href = "/ie.css";
   document.head.appendChild(css);
 }
-
-inject(
-  "https://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&ActivityID=1038527&rnd=" +
-    +new Date()
-);
 
 inject("https://www.google-analytics.com/analytics.js");
 
