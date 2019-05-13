@@ -33,7 +33,7 @@ const fetchPage = (url, replaceState = false) => {
 const registerFetchPage = (parent = "body") => {
   $(parent)
     .find(
-      `a:not([href^="#"]):not([href^="http"]):not(href^="mailto"):not([data-root]):not([target=_blank]):not([href="${BASE_URL}"])`
+      `a:not([href^="#"]):not([href^="http"]):not([href^="mailto"]):not([data-root]):not([target="_blank"]):not([href="${BASE_URL}"])`
     )
     .on("click", function(e) {
       e.preventDefault();
