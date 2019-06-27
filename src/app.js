@@ -11,7 +11,7 @@ const onLoad = () => {
       initialSlide: 1
     });
 
-    const forecasts = new Forecasts(BASE_URL + "forecasts_live.aspx");
+    const forecasts = new Forecasts("https://alpha.dvrpc.org/aqp/");
 
     forecasts.on("load", function() {
       $("body").addClass(
