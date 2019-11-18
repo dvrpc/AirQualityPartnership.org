@@ -6,8 +6,6 @@ protected void Application_BeginRequest(object sender, EventArgs e)
 		"/about/",
 		"/news/",
 		"/resources/",
-		"/greencommute/",
-		"/greencommute/rules/",
 		"/404/"
 	};
 
