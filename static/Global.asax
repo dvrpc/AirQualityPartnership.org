@@ -6,7 +6,8 @@ protected void Application_BeginRequest(object sender, EventArgs e)
 		"/about/",
 		"/news/",
 		"/resources/",
-		"/404/"
+		"/404/",
+		"/cleandriving/"
 	};
 
     if (Routes.Contains(Request.Url.AbsolutePath.ToLower()))
