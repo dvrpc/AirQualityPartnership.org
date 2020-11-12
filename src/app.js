@@ -95,7 +95,7 @@ function renderForecasts(forecasts, swiper) {
     $(".swiper-wrapper").append(
       '<div class="swiper-slide"><p><strong>Greater Philadelphia</strong><br/><small><em>as of ' +
         new Date(forecast.updated)
-          .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+          .toLocaleTimeString([], { hour: "numeric", minute: "numeric" })
           .toLocaleLowerCase() +
         "</em></small></p><h1>" +
         dateString[i] +
