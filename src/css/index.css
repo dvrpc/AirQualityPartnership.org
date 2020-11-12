@@ -273,9 +273,8 @@ main {
   flex-direction: column;
   padding: 16px;
 }
-.swiper-slide p {
-  margin: 0;
-  letter-spacing: 0.05em;
+.disclaimer {
+  margin-top: 1.5rem;
 }
 h1 {
   font-size: 1.8em;
@@ -622,9 +621,6 @@ footer {
     border-right: 5px solid white;
     box-shadow: 1px 1px 8px 0 hsla(0, 0%, 0%, 0.66);
     flex: 1 0 calc(16em + 40px);
-  }
-  .forecast-grid small {
-    font-size: 1rem;
   }
   h1 {
     font-size: 2.25em;
