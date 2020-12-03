@@ -654,9 +654,9 @@ footer {
   .forecast-details__panel--active > .forecast-details-panel,
   .content-panel--active {
     min-width: 0;
-    min-height: calc(16em + 40px);
+    min-height: calc(21em + 40px);
     max-height: fit-content;
-    margin-top: calc(-16em - 40px);
+    margin-top: calc(-21em - 40px);
     margin-bottom: 3em;
   }
   footer {
