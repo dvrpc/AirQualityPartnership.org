@@ -20,7 +20,9 @@ module.exports = {
       template: "./src/index.html",
     }),
     new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/\.(css|js)$/]),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "/[name].css",
+    }),
     new CopyWebpackPlugin({
       patterns: [{ from: "static" }, { from: "partials", to: "partials" }],
     }),
