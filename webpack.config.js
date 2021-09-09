@@ -37,8 +37,9 @@ module.exports = {
         "**/*.aspx",
         "**/*.asax",
       ],
+      safeToUseOptionalCaches: true,
       caches: {
-        main: ["main.js", "main.css", "index.html"],
+        main: ["main.js", "index.html"],
         additional: [":rest:"],
       },
       ServiceWorker: {
