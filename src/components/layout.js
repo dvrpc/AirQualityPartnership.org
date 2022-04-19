@@ -1,0 +1,126 @@
+import React, { useContext, useEffect } from "react";
+import Header from "./Header";
+import DesktopDrawer from "./DesktopDrawer";
+import "../css/index.css";
+import { closeDrawer } from "../utils/drawer";
+import EnglishLinks from "./EnglishLinks";
+import SpanishLinks from "./SpanishLinks";
+import AppContext from "../utils/AppContext";
+import { Link } from "gatsby";
+import isBrowser from "../utils/isBrowser";
+import { navigate } from "gatsby";
+
+const Layout = ({ children }) => {
+  const { language, theme } = useContext(AppContext);
+
+  // make mobile drawer at bottom of page invisible if take action is selected
+  useEffect(() => {
+    if (!isBrowser) {
+      return;
+    }
+
+    if (!theme.condition) {
+      navigate("/");
+    }
+
+    const current = document.getElementById("mobile-drawer");
+    if (
+      current.style.display !== "none" &&
+      current.previousSibling.className.includes("card")
+    ) {
+      current.style.display = "none";
+    }
+  }, [theme.condition]);
+
+  return (
+    <div className="body">
+      <Header />
+      <aside id="mobile-drawer-header" class="drawer">
+        <nav class="drawer__drawer">
+          <button
+            class="drawer__close-btn"
+            aria-label="close"
+            onClick={closeDrawer}
+          >
+            <span class="icon-close"></span>
+          </button>
+          <div class="drawer-list">
+            {!language.isSpanish ? (
+              <EnglishLinks closeDrawer={closeDrawer} />
+            ) : (
+              <SpanishLinks closeDrawer={closeDrawer} />
+            )}
+          </div>
+        </nav>
+        <footer>
+          <div>
+            <p>
+              <a href="mailto:sgreene@dvrpc.org">sgreene@dvrpc.org</a> |
+              215.238.2860
+              <br />
+              <a
+                rel="noopener"
+                href="https://www.dvrpc.org/GetInvolved/TitleVI/"
+              >
+                Title VI Statement
+              </a>
+            </p>
+            <p>
+              <small>
+                Copyright &copy; 2006- <span class="current-year"></span> Air
+                Quality Partnership
+                <br />
+                <i>
+                  Last Updated:
+                  <span class="last-updated"></span>
+                </i>
+              </small>
+            </p>
+          </div>
+        </footer>
+      </aside>
+      <div className="content">
+        <DesktopDrawer />
+        <main>
+          {children}
+          <div id="mobile-drawer" class="mobile-drawer">
+            <Link
+              class="drawer-list-item"
+              to={!language.isSpanish ? "/TakeAction" : "/TomarAccion"}
+              activeClassName="drawer-list-item"
+            >
+              {!language.isSpanish ? "Take Action" : "Tomar Acción"}
+            </Link>
+            <a
+              class="drawer-list-item"
+              href="http://delawarevalley.enviroflash.info/signup.cfm"
+              rel="noopener"
+            >
+              {!language.isSpanish
+                ? "Sign Up for Alerts"
+                : "Inscríbase para alertas"}
+            </a>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <div>
+          <p className="adjust-col">
+            <a href="mailto:sgreene@dvrpc.org">sgreene@dvrpc.org</a> |
+            215.238.2860 |
+            <a rel="noopener" href="https://www.dvrpc.org/GetInvolved/TitleVI/">
+              Title VI Statement
+            </a>
+            <br />
+            <small>
+              Copyright © 2006-<span>{new Date().getFullYear()}</span> Air
+              Quality Partnership
+            </small>
+          </p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Layout;
