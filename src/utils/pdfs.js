@@ -10,7 +10,7 @@ import AQPConstitutionSocialMedia from "../pdf/AQP_PAConstitution_SocialMedia.pn
 import AQPTipsZip from "../pdf/AQP_Tips.zip";
 import Children from "../pdf/Children.pdf";
 import CocosOrangeDay from "../pdf/cocos-orange-day_sp.pdf";
-import OlderAdults from "../pdf/OlderAdults.pdf";
+import OlderAdults from "../pdf/AQP_Brochure_for_OlderAdults.pdf";
 import Tips from "../pdf/tips.pdf";
 import WheresMikeTeacher from "../pdf/Wheres_Mike_Teacher_Guide.pdf";
 import WheresMikePrint from "../pdf/WheresMike_print_11x17.pdf";

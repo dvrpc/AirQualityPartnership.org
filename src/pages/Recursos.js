@@ -28,14 +28,14 @@ const Recursos = () => {
 
           <h3>Vídeos</h3>
           <ul className="list-group">
-            <li className="list-group-item">
+            {/* <li className="list-group-item">
               <a
                 target="_blank"
                 href="https://www.youtube.com/watch?v=nu6iPX1UoKc"
               >
                 Get Back on Transit
               </a>
-            </li>
+            </li> */}
             <li className="list-group-item">
               <a
                 target="_blank"

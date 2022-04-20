@@ -55,8 +55,8 @@ const Layout = ({ children }) => {
         <footer>
           <div>
             <p>
-              <a href="mailto:sgreene@dvrpc.org">sgreene@dvrpc.org</a> |
-              215.238.2860
+              <a href="mailto:sbartels@dvrpc.org">sbartels@dvrpc.org</a> |
+              215.238.2861
               <br />
               <a
                 rel="noopener"
@@ -106,9 +106,10 @@ const Layout = ({ children }) => {
       <footer>
         <div>
           <p className="adjust-col">
-            <a href="mailto:sgreene@dvrpc.org">sgreene@dvrpc.org</a> |
-            215.238.2860 |
+            <a href="mailto:sbartels@dvrpc.org">sbartels@dvrpc.org</a> |
+            215.238.2861 |
             <a rel="noopener" href="https://www.dvrpc.org/GetInvolved/TitleVI/">
+              {" "}
               Title VI Statement
             </a>
             <br />
