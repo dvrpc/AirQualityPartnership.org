@@ -19,6 +19,8 @@ import ESAQPBrochureChildren from "../pdf/es-Children.pdf";
 import ESCocosOrangeDay from "../pdf/es-cocos-orange-day_sp.pdf";
 import ESOlderAdults from "../pdf/es-OlderAdults.pdf";
 import ESAQPBrochureBusiness from "../pdf/Su empresa y la calidad del aire.pdf";
+import AQPActivitySheet from "../pdf/11x17_AirQualityPartnershipActivitySheet.pdf";
+import ESAQPActivitySheet from "../pdf/11x17_AQPPaginaDeActividad.pdf";
 
 const Pdf = ({ use, text }) => {
   const file = use;
@@ -54,4 +56,6 @@ export {
   ESCocosOrangeDay,
   ESOlderAdults,
   ESAQPBrochureBusiness,
+  AQPActivitySheet,
+  ESAQPActivitySheet,
 };

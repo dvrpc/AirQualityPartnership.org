@@ -15,6 +15,7 @@ import Pdf, {
   WheresMikePrint,
   WheresMikeTeacher,
   AQPTipsZip,
+  AQPActivitySheet,
 } from "../utils/pdfs";
 
 const Resources = () => {
@@ -144,6 +145,13 @@ const Resources = () => {
                 text={`Workbook for Kids: "Where's Mike?" Teacher’s Guide`}
               />
               <span className="sm">[0.8 MB pdf]</span>
+            </li>
+            <li className="list-group-item">
+              <Pdf
+                use={AQPActivitySheet}
+                text={`AQP Partnership Activity Sheet`}
+              />
+              <span className="sm">[10.2 MB pdf]</span>
             </li>
           </ul>
 

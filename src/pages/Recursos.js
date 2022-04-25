@@ -9,6 +9,7 @@ import Pdf, {
   ESCocosOrangeDay,
   ESOlderAdults,
   ESAQPBrochureBusiness,
+  ESAQPActivitySheet,
 } from "../utils/pdfs";
 
 const Recursos = () => {
@@ -93,6 +94,11 @@ const Recursos = () => {
                 text="EPA - ¿Por qué Coco es de color naranja?"
               />
               <span className="sm">[1.4 MB pdf]</span>
+            </li>
+            <li className="list-group-item">
+              {/* AQP Partnership Activity Sheet */}
+              <Pdf use={ESAQPActivitySheet} text={`AQP Pagina De Actividad`} />
+              <span className="sm">[10.2 MB pdf]</span>
             </li>
           </ul>
 
