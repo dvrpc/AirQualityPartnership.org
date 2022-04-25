@@ -8,6 +8,7 @@ import Pdf, {
   ESAQPBrochureChildren,
   ESCocosOrangeDay,
   ESOlderAdults,
+  ESAQPBrochureBusiness,
 } from "../utils/pdfs";
 
 const Recursos = () => {
@@ -63,6 +64,14 @@ const Recursos = () => {
                 text="Niños y la calidad del aire"
               />
               <span className="sm">[2.7 MB pdf]</span>
+            </li>
+            <li className="list-group-item">
+              {/* Your Business and Air Quality */}
+              <Pdf
+                use={ESAQPBrochureBusiness}
+                text="Su empresa y la Calidad del aire"
+              />
+              <span className="sm">[5.5 MB pdf]</span>
             </li>
           </ul>
 

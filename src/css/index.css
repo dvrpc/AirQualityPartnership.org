@@ -79,8 +79,8 @@ header img {
   cursor: pointer;
   background: none;
   border: none;
-  height: 24px;
-  width: 24px;
+  height: min-content;
+  width: min-content;
 }
 .content {
   position: relative;
@@ -631,6 +631,10 @@ footer {
 }
 .right > strong {
   transform: rotate(90deg);
+}
+.drawer__drawer > button {
+  height: min-content;
+  width: min-content;
 }
 @media (min-width: 660px) {
   .left,
