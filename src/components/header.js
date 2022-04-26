@@ -1,6 +1,6 @@
 import * as React from "react";
-import DVRPC from "../images/dvrpc.png";
-import AirQualityPartnership from "../images/aqp.png";
+import DVRPC from "../images/dvrpc.svg";
+import AirQualityPartnership from "../images/AQP.svg";
 import { openDrawer } from "../utils/drawer";
 
 const Header = () => (
@@ -12,16 +12,24 @@ const Header = () => (
         </button>
       </section>
       <section className="logo">
-        <a rel="noopener" href="https://www.dvrpc.org/">
+        <a
+          id="DVRPC"
+          rel="noopener"
+          href="https://www.dvrpc.org/"
+          style={{ borderRight: "1px solid gray", paddingRight: "5%" }}
+        >
           <img
             src={DVRPC}
             alt="Delaware Valley Regional Planning Commission"
             width="162"
-            style={{ borderRight: "1px solid gray" }}
           />
         </a>
-        <a href="/" data-root>
-          <img src={AirQualityPartnership} alt="Air Quality Partnership" />
+        <a id="AQP" href="/" style={{ paddingLeft: "5%" }}>
+          <img
+            src={AirQualityPartnership}
+            alt="Air Quality Partnership"
+            width="132"
+          />
         </a>
       </section>
     </div>
