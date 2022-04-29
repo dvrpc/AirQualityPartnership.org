@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "gatsby";
 import AppContext from "../utils/AppContext";
 
-const EnglishLinks = () => {
+const EnglishLinks = ({ closeDrawer }) => {
   const { language } = useContext(AppContext);
 
   return (
@@ -38,7 +38,12 @@ const EnglishLinks = () => {
       <Link
         className="drawer-list-item"
         style={{ cursor: "pointer" }}
-        onClick={() => language.setIsSpanish(!language.isSpanish)}
+        onClick={() => {
+          language.setIsSpanish(!language.isSpanish);
+          if (closeDrawer) {
+            closeDrawer();
+          }
+        }}
         to="/"
         activeClassName="drawer-list-item"
       >

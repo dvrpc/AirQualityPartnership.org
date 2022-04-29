@@ -84,13 +84,6 @@ const Layout = ({ children }) => {
         <main>
           {children}
           <div id="mobile-drawer" class="mobile-drawer">
-            <Link
-              class="drawer-list-item"
-              to={!language.isSpanish ? "/TakeAction" : "/TomarAccion"}
-              activeClassName="drawer-list-item"
-            >
-              {!language.isSpanish ? "Take Action" : "Tomar Acción"}
-            </Link>
             <a
               class="drawer-list-item"
               href="http://delawarevalley.enviroflash.info/signup.cfm"
