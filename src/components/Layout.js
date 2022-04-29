@@ -6,7 +6,6 @@ import { closeDrawer } from "../utils/drawer";
 import EnglishLinks from "./EnglishLinks";
 import SpanishLinks from "./SpanishLinks";
 import AppContext from "../utils/AppContext";
-import { Link } from "gatsby";
 import isBrowser from "../utils/isBrowser";
 import { navigate } from "gatsby";
 
