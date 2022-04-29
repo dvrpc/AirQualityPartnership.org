@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Layout from "../components/Layout";
 import AppContext from "../utils/AppContext";
 import CloseButton from "../components/CloseButton";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 import Pdf, {
   ESAirQualityGuideSchools,
   ESAQPBrochureChildren,

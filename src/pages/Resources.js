@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CloseButton from "../components/CloseButton";
 import Layout from "../components/Layout";
-import Seo from "../components/seo";
+import Seo from "../components/Seo";
 import AppContext from "../utils/AppContext";
 import Pdf, {
   Tips,
