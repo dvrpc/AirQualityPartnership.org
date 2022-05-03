@@ -111,7 +111,7 @@ const Layout = ({ children }) => {
           </div>
         </main>
       </div>
-      <footer>
+      <footer style={{ display: "static" }}>
         <div>
           <p className="adjust-col">
             <a href="mailto:sbartels@dvrpc.org">sbartels@dvrpc.org</a> |

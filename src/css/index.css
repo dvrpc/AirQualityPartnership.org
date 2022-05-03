@@ -2,8 +2,7 @@
 @import "swiper.min.css";
 
 html,
-body,
-.body {
+body {
   height: 100%;
 }
 * {
@@ -29,6 +28,15 @@ body::before,
   background-position: 75%;
   z-index: -1;
   transition: background 1s;
+}
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100vh;
+}
+.body {
+  height: 100%;
 }
 a {
   color: inherit;
@@ -585,7 +593,7 @@ figcaption {
 }
 footer {
   display: none;
-  position: fixed;
+  position: static;
   bottom: 0;
   width: 100%;
 }
@@ -725,7 +733,7 @@ footer {
     color: #f9f9f9;
     text-shadow: 1px 1px 8px hsla(0, 0%, 0%, 0.85);
     display: block;
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
   }
