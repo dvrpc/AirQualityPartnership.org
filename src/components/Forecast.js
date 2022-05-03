@@ -17,10 +17,6 @@ const Forecast = () => {
       return;
     }
 
-    if (images.length) {
-      document.body.className = images[1];
-      theme.setCondition(images[1].slice(0, -1));
-    }
     setRenderedForecasts(renderForecasts(forecasts, language.isSpanish));
   }, [forecasts, images, language.isSpanish, theme.setCondition]);
 
@@ -62,8 +58,9 @@ const Forecast = () => {
               if (!isBrowser) {
                 return;
               }
-              document.body.className = images[swiper.activeIndex];
+
               if (images[swiper.activeIndex]) {
+                document.body.className = images[swiper.activeIndex];
                 theme.setCondition(images[swiper.activeIndex].slice(0, -1));
               }
             }}

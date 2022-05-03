@@ -11,6 +11,7 @@ import Pdf, {
   ESAQPBrochureBusiness,
   ESAQPActivitySheet,
 } from "../utils/pdfs";
+import Forecast from "../components/Forecast";
 
 const Recursos = () => {
   const { theme } = useContext(AppContext);

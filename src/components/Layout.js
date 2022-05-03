@@ -7,20 +7,19 @@ import EnglishLinks from "./EnglishLinks";
 import SpanishLinks from "./SpanishLinks";
 import AppContext from "../utils/AppContext";
 import isBrowser from "../utils/isBrowser";
-import { navigate } from "gatsby";
 import Helmet from "react-helmet";
 
 const Layout = ({ children }) => {
-  const { language, theme } = useContext(AppContext);
+  const { images, language, theme } = useContext(AppContext);
 
   // make mobile drawer at bottom of page invisible if take action is selected
   useEffect(() => {
     if (!isBrowser) {
       return;
     }
-
-    if (!theme.condition) {
-      navigate("/");
+    if (!document.body.className && images.length) {
+      document.body.className = images[1];
+      theme.setCondition(images[1].slice(0, -1));
     }
 
     const current = document.getElementById("mobile-drawer");
@@ -30,7 +29,7 @@ const Layout = ({ children }) => {
     ) {
       current.style.display = "none";
     }
-  }, [theme.condition]);
+  }, [images, theme.condition]);
 
   return (
     <div className="body">
