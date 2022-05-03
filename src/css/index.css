@@ -111,6 +111,11 @@ header img {
   min-width: 24px;
   margin: 0.4em;
 }
+.icon-close .forecast--moderate {
+  content: url("https://icons.simplesvg.com/fa-close.svg?color=%black&height=24&inline=true");
+  vertical-align: -0.143em;
+  height: 2em;
+}
 .icon-close {
   content: url("https://icons.simplesvg.com/fa-close.svg?color=%23f9f9f9&height=24&inline=true");
   vertical-align: -0.143em;
