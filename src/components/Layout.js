@@ -7,7 +7,6 @@ import EnglishLinks from "./EnglishLinks";
 import SpanishLinks from "./SpanishLinks";
 import AppContext from "../utils/AppContext";
 import isBrowser from "../utils/isBrowser";
-import Helmet from "react-helmet";
 
 const Layout = ({ children }) => {
   const { images, language, theme } = useContext(AppContext);
@@ -29,25 +28,10 @@ const Layout = ({ children }) => {
     ) {
       current.style.display = "none";
     }
-  }, [images, theme.condition]);
+  }, [images, theme.setCondition]);
 
   return (
     <div className="body">
-      <Helmet>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-9825778-3"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-9825778-3');
-          `}
-        </script>
-      </Helmet>
       <Header />
       <aside id="mobile-drawer-header" class="drawer">
         <nav class="drawer__drawer">
