@@ -606,6 +606,11 @@ footer {
   order: 0;
   flex-direction: row;
 }
+.left > strong,
+.right > strong {
+  min-width: 15%;
+  text-align: center;
+}
 .right {
   order: 2;
   flex-direction: row-reverse;
@@ -774,6 +779,10 @@ footer {
   .right {
     width: 20%;
   }
+  .left > strong,
+  .right > strong {
+    min-width: 20%;
+  }
 }
 @media (max-width: 780px) {
   .content {
@@ -833,6 +842,12 @@ footer {
   .left > .spanish,
   .right > .spanish {
     font-size: 0.85em;
+  }
+  .left > strong {
+    min-width: 25%;
+  }
+  .right > strong {
+    min-width: 22%;
   }
 }
 @media (min-width: 780px) {

@@ -27,18 +27,18 @@ const Forecast = () => {
         style={{ display: "flex", margin: "0px" }}
       >
         <div className="left">
+          <span className="icon-left" />
           {!language.isSpanish ? (
             <strong>YESTERDAY</strong>
           ) : (
-            <strong className="spanish">EL DÍA DESPUÉS</strong>
+            <strong className="spanish">AYER</strong>
           )}
-          <span className="icon-left" />
         </div>
         <div className="right">
           {!language.isSpanish ? (
             <strong>TOMORROW</strong>
           ) : (
-            <strong className="spanish">EL DÍA ANTES</strong>
+            <strong className="spanish">MAÑANA</strong>
           )}
           <span className="icon-right" />
         </div>
