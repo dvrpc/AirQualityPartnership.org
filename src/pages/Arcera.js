@@ -12,7 +12,7 @@ const Arcera = () => {
       <Seo title="Arcera" />
       <div className={`card ${theme.condition}`} lang="es">
         <div className="header">
-          <h2>ARCERA DE</h2>
+          <h2>SOBRE NOSOTROS</h2>
           <CloseButton />
         </div>
         <div>

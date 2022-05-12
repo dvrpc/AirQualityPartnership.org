@@ -8,7 +8,7 @@ export const renderForecasts = (forecasts, isSpanish) => {
   const ret = [];
   const dateString = !isSpanish
     ? ["Yesterday", "Today", "Tomorrow"]
-    : ["Ayer", "Hoy Dia", "Mañana"];
+    : ["Ayer", "Hoy", "Mañana"];
 
   forecasts.forEach(function (forecast, i) {
     const day = !isSpanish ? dateString[i] + "'s " : "";
@@ -39,7 +39,9 @@ export const renderForecasts = (forecasts, isSpanish) => {
     ret.push(
       `<div class="swiper-slide"><p><strong>${
         !isSpanish ? "Greater Philadelphia" : "Gran Filadelfia"
-      }</strong><br/><small><em>${!isSpanish ? "as of " : "a la "} ` +
+      }</strong><br/><small><em>${
+        !isSpanish ? "as of " : "a partir de las "
+      } ` +
         new Date()
           .toLocaleTimeString([], { hour: "numeric", minute: "numeric" })
           .toLocaleLowerCase() +
@@ -49,7 +51,7 @@ export const renderForecasts = (forecasts, isSpanish) => {
         `${
           !isSpanish
             ? "Air Quality: "
-            : "La calidad del aire de " + dateString[i] + ": "
+            : "La calidad del aire " + dateString[i] + ": "
         }<br/>` +
         // (i === 2 ? "will be " : (i === 0 ? "wa" : "i") + "s ") +
         forecast +
