@@ -46,6 +46,13 @@ const TakeAction = () => {
             Don’t “top off” your tank when refueling.
             <small>Spillage adds two tons of air pollution daily.</small>
           </li>
+          <li className="action-group-item visible--good">
+            Bundle your online and delivery orders.
+            <small>
+              Fewer packages means fewer delivery vehicles on our streets, and
+              less air pollution.
+            </small>
+          </li>
           <li className="action-group-item visible--sensitive visible--unhealthy">
             Postpone mowing the lawn.
             <small>
@@ -60,8 +67,9 @@ const TakeAction = () => {
               or fireplace.
             </small>
           </li>
-          <li className="action-group-item visible--good">
-            Refrain from burning trash or yard waste.
+          <li className="action-group-item visible--good visible--moderate">
+            Keep the right amount of air in the tires.
+            <small>Proper tire pressure saves gas and the air.</small>
           </li>
           <li className="action-group-item visible--good visible--moderate">
             Conserve energy at home.
@@ -84,8 +92,8 @@ const TakeAction = () => {
           <li className="action-group-item visible--good">
             Join your local Transportation Management Association.
             <small>
-              Your TMA can provide tips and advice on reduce pollution from your
-              commute.
+              Your TMA can provide tips and advice on reducing pollution from
+              your commute.
             </small>
           </li>
           <li className="action-group-item visible--sensitive visible--unhealthy">
@@ -95,12 +103,11 @@ const TakeAction = () => {
               household and personal products that cause fumes can be hazardous.
             </small>
           </li>
-          <li className="action-group-item visible--good visible--moderate">
-            Keep the right amount of air in the tires.
-            <small>Proper tire pressure saves gas and the air.</small>
-          </li>
           <li className="action-group-item visible--sensitive visible--unhealthy">
             Use teleconferencing instead of driving to meetings.
+          </li>
+          <li className="action-group-item visible--good">
+            Refrain from burning trash or yard waste.
           </li>
         </ul>
       </div>
