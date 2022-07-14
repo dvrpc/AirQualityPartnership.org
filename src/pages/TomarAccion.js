@@ -37,6 +37,13 @@ const TomarAccion = () => {
               frío innecesarios.
             </small>
           </li>
+          <li className="action-group-item visible--good">
+            Compra tus productos en lote.
+            <small>
+              Menos paquetes significa menos distribución de camiones, y menos
+              contaminación al medio ambiente.
+            </small>
+          </li>
           <li className="action-group-item visible--sensitive visible--unhealthy">
             Cargue combustible al final del día.
             <small>
