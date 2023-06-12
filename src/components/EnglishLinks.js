@@ -30,7 +30,7 @@ const EnglishLinks = ({ closeDrawer }) => {
       </Link>
       <a
         className="drawer-list-item"
-        href="http://delawarevalley.enviroflash.info/signup.cfm"
+        href="https://www.enviroflash.info/signup.cfm"
         rel="noopener"
       >
         Sign Up for Alerts

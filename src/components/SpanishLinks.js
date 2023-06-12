@@ -30,7 +30,7 @@ const SpanishLinks = ({ closeDrawer }) => {
       </Link>
       <a
         className="drawer-list-item"
-        href="http://delawarevalley.enviroflash.info/signup.cfm"
+        href="https://www.enviroflash.info/signup.cfm"
       >
         Inscríbase para alertas
       </a>
