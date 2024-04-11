@@ -28,10 +28,7 @@ const SpanishLinks = ({ closeDrawer }) => {
       >
         Recursos
       </Link>
-      <a
-        className="drawer-list-item"
-        href="https://www.enviroflash.info/signup.cfm"
-      >
+      <a className="drawer-list-item" href="https://m.enviroflash.info/">
         Inscríbase para alertas
       </a>
       <Link

@@ -28,11 +28,7 @@ const EnglishLinks = ({ closeDrawer }) => {
       >
         Resources
       </Link>
-      <a
-        className="drawer-list-item"
-        href="https://www.enviroflash.info/signup.cfm"
-        rel="noopener"
-      >
+      <a className="drawer-list-item" href="https://m.enviroflash.info/">
         Sign Up for Alerts
       </a>
       <Link
