@@ -16,7 +16,7 @@ export const AppProvider = (props) => {
 
   useEffect(() => {
     async function fetchData() {
-      const req = await fetch("https://cloud.dvrpc.org/api/aqp/latest");
+      const req = await fetch(process.env.GATSBY_API_URL);
       const res = await req.json();
       const urls = [];
       const index = shuffle();
