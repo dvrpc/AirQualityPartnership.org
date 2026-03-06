@@ -11,6 +11,10 @@ export const renderForecasts = (forecasts, isSpanish) => {
     : ["Ayer", "Hoy", "Mañana"];
 
   forecasts.forEach(function (forecast, i) {
+    const time = new Date(forecast.updated).toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+    });
     const day = !isSpanish ? dateString[i] + "'s " : "";
     const disclaimer = !isSpanish
       ? "Today's Air Quality is updated hourly to reflect available EPA data."
@@ -42,9 +46,7 @@ export const renderForecasts = (forecasts, isSpanish) => {
       }</strong><br/><small><em>${
         !isSpanish ? "as of " : "a partir de las "
       } ` +
-        new Date()
-          .toLocaleTimeString([], { hour: "numeric", minute: "numeric" })
-          .toLocaleLowerCase() +
+        time +
         "</em></small></p><h1>" +
         day +
         (i === 1 ? `${!isSpanish ? "Current " : ""}` : "") +

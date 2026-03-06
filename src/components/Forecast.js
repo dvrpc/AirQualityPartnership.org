@@ -11,6 +11,7 @@ import isBrowser from "../utils/isBrowser";
 const Forecast = () => {
   const { forecasts, images, language, theme } = useContext(AppContext);
   const [renderedForecasts, setRenderedForecasts] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(1);
 
   useEffect(() => {
     if (!isBrowser) {
@@ -29,14 +30,22 @@ const Forecast = () => {
         <div className="left">
           <span className="icon-left" />
           {!language.isSpanish ? (
-            <strong>YESTERDAY</strong>
+            currentSlide === 2 ? (
+              <strong>TODAY</strong>
+            ) : (
+              <strong>YESTERDAY</strong>
+            )
           ) : (
             <strong className="spanish">AYER</strong>
           )}
         </div>
         <div className="right">
           {!language.isSpanish ? (
-            <strong>TOMORROW</strong>
+            currentSlide === 0 ? (
+              <strong>TODAY</strong>
+            ) : (
+              <strong>TOMORROW</strong>
+            )
           ) : (
             <strong className="spanish">MAÑANA</strong>
           )}
@@ -55,6 +64,7 @@ const Forecast = () => {
             }}
             modules={[Navigation]}
             onSlideChange={(swiper) => {
+              setCurrentSlide(swiper.realIndex);
               if (!isBrowser) {
                 return;
               }
